@@ -7,4 +7,4 @@ RUN mkdir -p $SRC_DIR
 VOLUME $SRC_DIR
 WORKDIR $SRC_DIR
 COPY package.json $SRC_DIR
-RUN npm i
+RUN yarn
