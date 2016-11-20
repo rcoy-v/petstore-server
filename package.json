@@ -1,0 +1,12 @@
+{
+    "name": "petstore-server",
+    "private": true,
+    "version": "0.0.0",
+    "dependencies": {
+        "hapi": "15.2.0"
+    },
+    "scripts": {
+        "test": "echo pwd",
+        "start": "node src/index"
+    }
+}
