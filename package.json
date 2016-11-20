@@ -6,7 +6,7 @@
         "hapi": "15.2.0"
     },
     "scripts": {
-        "test": "echo pwd",
+        "test": "echo test",
         "start": "node src/index"
     }
 }
