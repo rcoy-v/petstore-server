@@ -7,4 +7,4 @@ services:
         volumes:
         - .:/usr/src/petstore-server
         - /usr/src/petstore-server/node_modules
-        command: npm start
+        command: yarn start
