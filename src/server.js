@@ -1,6 +1,8 @@
 'use strict';
 
 const Hapi = require('hapi');
+const graphql = require('graphql').graphql;
+const rootScema = require('./graphql-schema');
 
 const server = new Hapi.Server();
 
@@ -13,7 +15,9 @@ server.route({
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-        return reply('hello')
+        reply(graphql(rootScema, '{hello}').then((result) => {
+            return result;
+        }));
     }
 });
 
