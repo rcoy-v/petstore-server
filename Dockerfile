@@ -5,5 +5,6 @@ RUN apt-get update && apt-get install yarn -y
 ARG SRC_DIR=/usr/src/petstore-server
 RUN mkdir -p $SRC_DIR
 WORKDIR $SRC_DIR
-COPY package.json $SRC_DIR
-RUN yarn --no-lockfile
+COPY . $SRC_DIR
+RUN yarn
+CMD yarn start

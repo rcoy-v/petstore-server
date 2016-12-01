@@ -1,10 +1,6 @@
 version: '2'
 services:
     server:
-        image: petstore-server
+        build: .
         ports:
         - "8000:8000"
-        volumes:
-        - .:/usr/src/petstore-server
-        - /usr/src/petstore-server/node_modules
-        command: yarn start
