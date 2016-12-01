@@ -15,9 +15,7 @@ server.route({
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-        reply(graphql(rootScema, '{hello}').then((result) => {
-            return result;
-        }));
+        return reply(graphql(rootScema, '{hello}'));
     }
 });
 
