@@ -7,6 +7,6 @@
   },
   "scripts": {
     "test": "echo test",
-    "start": "node src/index"
+    "start": "node src/server.js"
   }
 }
