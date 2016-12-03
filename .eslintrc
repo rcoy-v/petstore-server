@@ -1,0 +1,25 @@
+{
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true
+        },
+        "sourceType": "script"
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "mocha": true
+    },
+    "extends": [
+        "rcoy-v/rules/es5",
+        "rcoy-v/rules/es6",
+        "rcoy-v/rules/node",
+        "rcoy-v/rules/mocha",
+    ],
+    "plugins": [
+        "mocha"
+    ],
+    "rules": {
+        "strict": [2, "global"]
+    }
+}

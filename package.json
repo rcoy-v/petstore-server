@@ -7,7 +7,12 @@
     "hapi": "15.2.0"
   },
   "scripts": {
-    "test": "echo test",
+    "eslint": "eslint \"src/**\" \"test/**\"",
+    "test": "yarn run eslint",
     "start": "node src/server.js"
+  },
+  "devDependencies": {
+    "eslint": "3.11.1",
+    "eslint-config-rcoy-v": "2.0.0"
   }
 }

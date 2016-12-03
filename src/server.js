@@ -12,17 +12,17 @@ server.connection({
 });
 
 server.route({
-    method: 'GET',
-    path: '/',
     handler: (request, reply) => {
         return reply(graphql(rootScema, '{hello}'));
-    }
+    },
+    method: 'GET',
+    path: '/'
 });
 
 server.start((error) => {
     if (error) {
-        throw error
+        throw error;
     }
 
-    console.log(`Server running at: ${server.info.uri}`)
+    console.log(`Server running at: ${server.info.uri}`); // eslint-disable-line no-console
 });
