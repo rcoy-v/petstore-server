@@ -6,6 +6,6 @@ ARG SRC_DIR=/usr/src/petstore-server/
 RUN mkdir -p $SRC_DIR
 WORKDIR $SRC_DIR
 COPY package.json yarn.lock $SRC_DIR
-RUN yarn
+RUN yarn --production
 COPY . $SRC_DIR
 CMD yarn start
