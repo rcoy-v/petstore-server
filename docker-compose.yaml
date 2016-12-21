@@ -4,3 +4,10 @@ services:
         build: .
         ports:
         - "8000:8000"
+    database:
+        image: postgres:9
+        environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=petstore
+        ports:
+        - "5432:5432"
