@@ -1,6 +1,8 @@
 # petstore-server
 
-![build master](https://travis-ci.org/rcoy-v/petstore-server.svg?branch=master)
+<a href="https://travis-ci.org/rcoy-v/petstore-server">
+    <img alt="build master" src="https://travis-ci.org/rcoy-v/petstore-server.svg?branch=master">
+ </a>
 
 run: `docker-compose up -d`
 
