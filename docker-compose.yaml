@@ -2,10 +2,10 @@ version: '2'
 services:
     server:
         build: .
+        links:
+        - database
         ports:
         - "8000:8000"
-        depends_on:
-        - database
     database:
         build: database
         environment:
