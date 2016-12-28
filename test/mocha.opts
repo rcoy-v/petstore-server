@@ -1,0 +1,5 @@
+--reporter progress
+--ui bdd
+--recursive
+--colors
+--use_strict
