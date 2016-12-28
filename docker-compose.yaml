@@ -4,8 +4,10 @@ services:
         build: .
         ports:
         - "8000:8000"
+        depends_on:
+        - database
     database:
-        image: postgres:9
+        build: database
         environment:
         - POSTGRES_USER=postgres
         - POSTGRES_PASSWORD=petstore
