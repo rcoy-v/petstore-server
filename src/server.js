@@ -2,7 +2,7 @@
 
 const Hapi = require('hapi');
 const graphql = require('graphql').graphql;
-const rootScema = require('./graphql-schema');
+const rootSchema = require('./graphql-schema');
 const logger = require('./logger');
 
 const server = new Hapi.Server();
@@ -14,7 +14,7 @@ server.connection({
 
 server.route({
     handler: (request, reply) => {
-        return reply(graphql(rootScema, '{hello}'));
+        return reply(graphql(rootSchema, '{hello}'));
     },
     method: 'GET',
     path: '/'
