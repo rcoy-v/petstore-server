@@ -3,17 +3,20 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
+    "config": "1.24.0",
     "graphql": "0.8.2",
     "hapi": "15.2.0",
-    "pg": "6.1.2"
+    "pg": "6.1.2",
+    "winston": "2.3.0"
   },
   "scripts": {
     "eslint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
-    "mocha": "mocha",
-    "start": "node src/server.js",
+    "mocha": "NODE_ENV=test mocha",
+    "start": "NODE_ENV=production node src/server.js",
     "test": "yarn run eslint && yarn run mocha"
   },
   "devDependencies": {
+    "chance": "1.0.4",
     "code": "4.0.0",
     "eslint": "3.11.1",
     "eslint-config-rcoy-v": "2.0.0",

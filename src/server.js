@@ -3,6 +3,7 @@
 const Hapi = require('hapi');
 const graphql = require('graphql').graphql;
 const rootScema = require('./graphql-schema');
+const logger = require('./logger');
 
 const server = new Hapi.Server();
 
@@ -24,5 +25,5 @@ server.start((error) => {
         throw error;
     }
 
-    console.log(`Server running at: ${server.info.uri}`); // eslint-disable-line no-console
+    logger.info(`Server running at: http://localhost:${server.info.port}`);
 });
