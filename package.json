@@ -11,7 +11,7 @@
   },
   "scripts": {
     "eslint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
-    "mocha": "NODE_ENV=test mocha test/**/*.spec.js",
+    "mocha": "NODE_ENV=test mocha \"test/**/*.spec.js\"",
     "start": "NODE_ENV=production node src/server.js",
     "test": "yarn run eslint && yarn run mocha"
   },

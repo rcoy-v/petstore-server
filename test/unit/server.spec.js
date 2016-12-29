@@ -6,6 +6,7 @@ describe('server', () => {
     let sandbox,
         connectionMock,
         routeMock,
+        allRoutes,
         startMock;
 
     function ServerStub() {
@@ -24,10 +25,13 @@ describe('server', () => {
         routeMock = sandbox.mock();
         startMock = sandbox.mock();
 
+        allRoutes = [];
+
         proxyquire('../../src/server', {
             'hapi': {
                 'Server': ServerStub
-            }
+            },
+            './routes': allRoutes
         });
     });
 
@@ -57,6 +61,15 @@ describe('server', () => {
 
             expect(connectionArgs.port).equals(expectedPort);
         });
+    });
+
+    describe('routes', () => {
+       it('should add all routes from directory', () => {
+           const firstCall = routeMock.args[0];
+           const givenRoutes = firstCall[0];
+
+           expect(givenRoutes).equals(allRoutes);
+       });
     });
 
     describe('start', () => {
