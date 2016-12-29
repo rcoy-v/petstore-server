@@ -28,10 +28,10 @@ describe('server', () => {
         allRoutes = [];
 
         proxyquire('../../src/server', {
+            './routes': allRoutes,
             'hapi': {
                 'Server': ServerStub
-            },
-            './routes': allRoutes
+            }
         });
     });
 
@@ -64,12 +64,12 @@ describe('server', () => {
     });
 
     describe('routes', () => {
-       it('should add all routes from directory', () => {
-           const firstCall = routeMock.args[0];
-           const givenRoutes = firstCall[0];
+        it('should add all routes from directory', () => {
+            const firstCall = routeMock.args[0];
+            const givenRoutes = firstCall[0];
 
-           expect(givenRoutes).equals(allRoutes);
-       });
+            expect(givenRoutes).equals(allRoutes);
+        });
     });
 
     describe('start', () => {

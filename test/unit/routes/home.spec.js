@@ -14,10 +14,10 @@ describe('home route', () => {
         graphqlSchemaStub = {};
 
         route = proxyquire('../../../src/routes/home', {
+            '../graphql-schema': graphqlSchemaStub,
             'graphql': {
                 'graphql': graphqlStub
-            },
-            '../graphql-schema': graphqlSchemaStub
+            }
         });
     });
 
